@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BriefcaseBehavior : MonoBehaviour
@@ -7,15 +8,18 @@ public class BriefcaseBehavior : MonoBehaviour
     //Properties
     [SerializeField] private Sprite openBriefcaseImage;
     [SerializeField] private Sprite closedBriefcaseImage;
+    [SerializeField] private TextMeshProUGUI briefcaseText;
+    [SerializeField] private GameObject briefcase;
     private SpriteRenderer spriteRenderer;
     public int moneyValue;
+    public bool isOpen = false;
 
 
     //Methods
-    void Start()
+    void Awake()
     {
         //Getting the component
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = briefcase.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -23,4 +27,15 @@ public class BriefcaseBehavior : MonoBehaviour
         
     }
 
+    public void ChangeSprite()
+    {
+        if (isOpen)
+        {
+            spriteRenderer.sprite = openBriefcaseImage;
+        }
+        else
+        {
+            spriteRenderer.sprite = closedBriefcaseImage;
+        }
+    }
 }

@@ -396,4 +396,6 @@ MonoBehaviour:
   closedBriefcaseImage: {fileID: 21300000, guid: f50cd4c4c95f09e44b5af445ead029d2, type: 3}
   briefcaseText: {fileID: 5310765311547391074}
   briefcase: {fileID: 2847413976776753767}
+  outlineImage: {fileID: 2667509276885714720}
   moneyValue: 0
+  isOpen: 0
